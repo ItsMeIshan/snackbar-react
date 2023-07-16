@@ -20,7 +20,7 @@ function Toast() {
       <div>
         <Info size={24} />
       </div>
-      <p>16 photos have been uploaded</p>
+      <p>16 photos have been uploaded!</p>
       <button>
         <X size={24} />
       </button>
