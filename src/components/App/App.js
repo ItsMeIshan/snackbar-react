@@ -1,5 +1,14 @@
+import SnackbarPreview from "../SnackbarPreview/SnackbarPreview";
+import SnackbarProvider from "../SnackbarProvider/SnackbarProvider";
+
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <SnackbarProvider>
+        <SnackbarPreview />
+      </SnackbarProvider>
+    </>
+  );
 }
 
 export default App;

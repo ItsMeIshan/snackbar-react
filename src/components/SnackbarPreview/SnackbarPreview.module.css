@@ -1,0 +1,85 @@
+.wrapper {
+  padding: 64px 32px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.wrapper header {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 64px;
+}
+
+.wrapper header h1 {
+  position: relative;
+  font-size: 4.25rem;
+  line-height: 1.1;
+  padding-bottom: 32px;
+  color: white;
+  /* prettier-ignore */
+  text-shadow:
+      0px 0px 10px hsl(250deg 40% 16% / 0.5),
+      0px 0px 20px hsl(250deg 40% 16% / 0.5),
+      0px 0px 40px hsl(250deg 40% 16% / 0.5);
+}
+
+.controlsWrapper {
+  color-scheme: light;
+  outline: 2px dashed hsl(250deg 80% 80% / 0.6);
+  outline-offset: 4px;
+  border-radius: 4px;
+  background: white;
+  color: black;
+  padding: 16px;
+  margin-top: 32px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  min-height: 3rem;
+}
+
+.row:not(:last-of-type) {
+  padding-bottom: 16px;
+  border-bottom: 1px dotted hsl(250deg 80% 80% / 0.5);
+  margin-bottom: 16px;
+}
+.previewButton {
+  padding: 5px 17px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.notice {
+  background-color: hsla(224, 100%, 58%, 1);
+}
+.notice:hover,
+:focus {
+  background-color: hsla(224, 100%, 40%, 1);
+}
+.warning {
+  background-color: var(--color-warning);
+}
+.warning:hover,
+:focus {
+  background-color: var(--color-warning-hover);
+}
+
+.success {
+  background-color: var(--color-success);
+}
+.success:hover,
+:focus {
+  background-color: var(--color-success-hover);
+}
+.error {
+  background-color: var(--color-error);
+}
+.error:hover,
+:focus {
+  background-color: var(--color-error-hover);
+}

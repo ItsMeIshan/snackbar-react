@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   AlertOctagon,
   AlertTriangle,
@@ -7,25 +7,41 @@ import {
   X,
 } from "react-feather";
 
-const ICONS = {
+import VisuallyHidden from "../VisuallyHidden";
+
+import styles from "./Snackbar.module.css";
+import { SnackbarContext } from "../SnackbarProvider/SnackbarProvider";
+
+const ICONS_BY_VARIANT = {
   notice: Info,
   warning: AlertTriangle,
   success: CheckCircle,
   error: AlertOctagon,
 };
 
-function Toast() {
+function Snackbar({ message, variant, id }) {
+  const { removeSnackbar } = useContext(SnackbarContext);
+  const Icon = ICONS_BY_VARIANT[variant];
+  const extraStyles = styles[variant];
   return (
-    <div>
-      <div>
-        <Info size={24} />
+    <div className={`${styles.snackbar} ${extraStyles}`}>
+      <div className={styles.iconContainer}>
+        <Icon size={24} />
       </div>
-      <p>16 photos have been uploaded!</p>
-      <button>
+      <p className={styles.content}>
+        {message === "" ? "Cool Snackbar!" : message}
+      </p>
+      <button
+        className={styles.closeButton}
+        onClick={() => {
+          removeSnackbar(id);
+        }}
+      >
         <X size={24} />
+        <VisuallyHidden>Dismiss message</VisuallyHidden>
       </button>
     </div>
   );
 }
 
-export default Toast;
+export default Snackbar;
