@@ -30,6 +30,7 @@ function App() {
 ```js
 <SnackbarStack />
 ```
+- use `Escape` shortcut for clearing all the Snackbar.
 
 ## If I had more time I would change this
 - additional props for customizing the position of Snackbar which is by default bottom right, animation tweaks, etc.
