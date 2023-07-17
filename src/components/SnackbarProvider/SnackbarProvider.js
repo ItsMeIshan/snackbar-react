@@ -21,6 +21,18 @@ function SnackbarProvider({ children }) {
     );
     setSnackbarList(updatedSnackbarList);
   }
+  React.useEffect(() => {
+    function handleKeyDown(e) {
+      if (e.code === "Escape") {
+        setSnackbarList([]);
+      }
+    }
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   return (
     <SnackbarContext.Provider
       value={{ snackbarList, addSnackbar, removeSnackbar }}

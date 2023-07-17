@@ -6,7 +6,7 @@ import Snackbar from "../Snackbar/Snackbar";
 function SnackbarStack() {
   const { snackbarList } = useContext(SnackbarContext);
   return (
-    <ol className={styles.wrapper}>
+    <ol role="region" aria-live="polite" className={styles.wrapper}>
       {snackbarList.length > 0 &&
         snackbarList.map((item) => {
           return (

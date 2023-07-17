@@ -29,6 +29,7 @@ function Snackbar({ message, variant, id }) {
         <Icon size={24} />
       </div>
       <p className={styles.content}>
+        <VisuallyHidden>{variant} - </VisuallyHidden>
         {message === "" ? "Cool Snackbar!" : message}
       </p>
       <button
@@ -36,9 +37,10 @@ function Snackbar({ message, variant, id }) {
         onClick={() => {
           removeSnackbar(id);
         }}
+        aria-label="dismiss message"
+        aria-live="off"
       >
         <X size={24} />
-        <VisuallyHidden>Dismiss message</VisuallyHidden>
       </button>
     </div>
   );
