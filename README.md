@@ -1,4 +1,5 @@
 # snackbar-react
+## Screenshots
 ![Screenshot 2023-07-17 at 6 21 32 PM](https://github.com/ItsMeIshan/snackbar-react/assets/65131563/adc5835e-337a-4034-8107-12d0103102cc)
 
 ## How I worked on this project
